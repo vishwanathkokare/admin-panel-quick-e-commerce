@@ -1,0 +1,163 @@
+import { type Item } from '@/components/datatable-orders'
+
+const ordersData: Item[] = [
+  {
+    id: 'ORD-1',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-1.png',
+    avatarFallback: 'JA',
+    name: 'Jack Mick Alfredo',
+    orderItems: [
+      { id: 'P1', productName: 'Veg Thali', quantity: 2, price: 150 },
+      { id: 'P2', productName: 'Butter Naan', quantity: 2, price: 40 },
+    ],
+    phoneNumber: '+919876543210',
+    address: 'MG Road, Pune',
+    amount: 380,
+    status: 'accepted',
+    paidBy: 'upi',
+  },
+  {
+    id: 'ORD-2',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-2.png',
+    avatarFallback: 'MG',
+    name: 'Maria Garcia Gonzalez',
+    orderItems: [
+      { id: 'P3', productName: 'Paneer Butter Masala', quantity: 1, price: 260 },
+    ],
+    phoneNumber: '+918765432109',
+    address: 'Baner, Pune',
+    amount: 260,
+    status: 'processing',
+    paidBy: 'cash',
+  },
+  {
+    id: 'ORD-3',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-3.png',
+    avatarFallback: 'JD',
+    name: 'John Simon Doe',
+    orderItems: [
+      { id: 'P4', productName: 'Chicken Biryani', quantity: 1, price: 320 },
+    ],
+    phoneNumber: '+917654321098',
+    address: 'Indira Nagar, Bengaluru',
+    amount: 320,
+    status: 'delivering',
+    paidBy: 'upi',
+  },
+  {
+    id: 'ORD-4',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-4.png',
+    avatarFallback: 'EC',
+    name: 'Emily Tom Carter',
+    orderItems: [
+      { id: 'P5', productName: 'Veg Burger', quantity: 2, price: 120 },
+    ],
+    phoneNumber: '+916543210987',
+    address: 'Andheri West, Mumbai',
+    amount: 240,
+    status: 'delivered',
+    paidBy: 'cash',
+  },
+  {
+    id: 'ORD-5',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-5.png',
+    avatarFallback: 'DL',
+    name: 'David Bruce Lee',
+    orderItems: [
+      { id: 'P6', productName: 'Fried Rice', quantity: 1, price: 180 },
+    ],
+    phoneNumber: '+915432109876',
+    address: 'Salt Lake, Kolkata',
+    amount: 180,
+    status: 'canceled',
+    paidBy: 'upi',
+  },
+
+  /* ---------- 6–25 ---------- */
+
+  {
+    id: 'ORD-6',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-6.png',
+    avatarFallback: 'SP',
+    name: 'Sophia Narad Patel',
+    orderItems: [{ id: 'P7', productName: 'Masala Dosa', quantity: 2, price: 90 }],
+    phoneNumber: '+919191919191',
+    address: 'Maninagar, Ahmedabad',
+    amount: 180,
+    status: 'accepted',
+    paidBy: 'cash',
+  },
+  {
+    id: 'ORD-7',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-7.png',
+    avatarFallback: 'RW',
+    name: 'Robert Franklin Wilson',
+    orderItems: [{ id: 'P8', productName: 'Pizza', quantity: 1, price: 350 }],
+    phoneNumber: '+918181818181',
+    address: 'Sector 18, Noida',
+    amount: 350,
+    status: 'processing',
+    paidBy: 'upi',
+  },
+  {
+    id: 'ORD-8',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-8.png',
+    avatarFallback: 'LM',
+    name: 'Lisa Marie Martinez',
+    orderItems: [{ id: 'P9', productName: 'Pasta', quantity: 1, price: 220 }],
+    phoneNumber: '+917171717171',
+    address: 'Banjara Hills, Hyderabad',
+    amount: 220,
+    status: 'delivering',
+    paidBy: 'cash',
+  },
+  {
+    id: 'ORD-9',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-9.png',
+    avatarFallback: 'MT',
+    name: 'Michael Thom Thompson',
+    orderItems: [{ id: 'P10', productName: 'Chicken Roll', quantity: 3, price: 120 }],
+    phoneNumber: '+916161616161',
+    address: 'Rajajinagar, Bengaluru',
+    amount: 360,
+    status: 'delivered',
+    paidBy: 'upi',
+  },
+  {
+    id: 'ORD-10',
+    avatar: 'https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-10.png',
+    avatarFallback: 'AJ',
+    name: 'Amanda John Johnson',
+    orderItems: [{ id: 'P11', productName: 'Sandwich', quantity: 2, price: 90 }],
+    phoneNumber: '+915151515151',
+    address: 'Kothrud, Pune',
+    amount: 180,
+    status: 'accepted',
+    paidBy: 'cash',
+  },
+
+  /* ---------- 11–25 condensed ---------- */
+
+  ...Array.from({ length: 15 }).map((_, i) => ({
+    id: `ORD-${11 + i}`,
+    avatar: `https://cdn.shadcnstudio.com/ss-assets/avatar/avatar-${11 + i}.png`,
+    avatarFallback: `U${11 + i}`,
+    name: `Customer ${11 + i}`,
+    orderItems: [
+      {
+        id: `P${20 + i}`,
+        productName: 'Combo Meal',
+        quantity: 1,
+        price: 299,
+      },
+    ],
+    phoneNumber: `+91990000${110 + i}`,
+    address: 'City Center, India',
+    amount: 299,
+    status: (['accepted', 'processing', 'delivering', 'delivered', 'canceled'] as const)[i % 5],
+    paidBy: (i % 2 === 0 ? 'upi' : 'cash') as Item['paidBy'],
+  })),
+]
+
+
+export default ordersData

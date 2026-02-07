@@ -1,0 +1,27 @@
+# Netlify configuration for Next.js app
+# Documentation: https://docs.netlify.com/
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[functions]
+  directory = ".netlify/functions"
+  node_bundler = "esbuild"
+
+# Redirect all non-file requests to Next.js (for App Router support)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache configuration for static assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

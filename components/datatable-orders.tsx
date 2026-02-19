@@ -76,8 +76,12 @@ export type Item = {
   paidBy: 'upi' | 'cash'
 }
 
-export default function OrdersDatatable() {
-  const [data, setData] = React.useState<Item[]>([])
+interface OrdersDatatableProps {
+  data?: Item[]
+}
+
+export default function OrdersDatatable({ data: initialData }: OrdersDatatableProps) {
+  const [data, setData] = React.useState<Item[]>(initialData || [])
   const [isLoading, setIsLoading] = React.useState(true)
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([])
